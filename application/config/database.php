@@ -75,11 +75,11 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '127.0.0.1:3306',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'CoreIgniter',
-	'dbdriver' => 'mysqli',
+	'hostname' => 'localhost',
+	'username' => 'ZebraUser',
+	'password' => 'zebra',
+	'database' => 'Zebra',
+	'dbdriver' => 'sqlsrv',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
 	'db_debug' => (ENVIRONMENT !== 'production'),

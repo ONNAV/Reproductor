@@ -67,7 +67,7 @@
 
 
 
-                <a href= "<?= base_url() ?>index.php/Login/Remember">No recuerdo mi contraseña</a><br>
+                <a href= "<?= base_url() ?>/Login/Remember">No recuerdo mi contraseña</a><br>
 
 
             </div><!-- /.login-box-body -->

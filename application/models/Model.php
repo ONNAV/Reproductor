@@ -108,7 +108,9 @@ class Model extends CI_Model {
 
     function walk($padre, $rol) {
         $funcionalidades = $this->query("SELECT * FROM Funcionalidad Where IDPadre = {$padre}");
-        if(!$funcionalidades) {            return;}
+        if (!$funcionalidades) {
+            return;
+        }
         foreach ($funcionalidades as $f) {
             $exist = $this->query("SELECT IDRolFuncionalidad FROM RolFuncionalidad WHERE IDFuncionalidad = {$f->IDFuncionalidad} AND IDRol = {$rol}");
             $ck = ($exist[0] != '') ? 'checked' : '';
@@ -125,7 +127,7 @@ class Model extends CI_Model {
                 . '<i class="fa fa-' . $f->Icono . '"></i> ' . $f->Nombre
                 . '</li>';
             }
-            
+
             if ($this->esPapi($f->IDFuncionalidad)) {
                 $this->walk($f->IDFuncionalidad, $rol);
             }
